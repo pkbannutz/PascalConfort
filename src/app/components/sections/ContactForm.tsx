@@ -1,15 +1,14 @@
 "use client";
 
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/app/components/ui/Button';
-import { ContactFormData } from '@/app/lib/types';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Numele trebuie să aibă cel puțin 2 caractere'),
   phone: z.string().min(10, 'Numărul de telefon trebuie să aibă cel puțin 10 cifre'),
+  address: z.string().min(5, 'Adresa trebuie să aibă cel puțin 5 caractere'),
   message: z.string().min(10, 'Mesajul trebuie să aibă cel puțin 10 caractere'),
 });
 
@@ -25,8 +24,15 @@ export function ContactForm() {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: ContactFormInputs) => {
-    const whatsappMessage = `Salut! Nume: ${data.name}\nTelefon: ${data.phone}\nMesaj: ${data.message}`;
+  const handleNormalSubmit = (data: ContactFormInputs) => {
+    const whatsappMessage = `Salut! Nume: ${data.name}\nTelefon: ${data.phone}\nAdresa: ${data.address}\nMesaj: ${data.message}`;
+    const whatsappUrl = `https://wa.me/40752399616?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+    reset();
+  };
+
+  const handleUrgentSubmit = (data: ContactFormInputs) => {
+    const whatsappMessage = `🚨 URGENT! 🚨\n\nNume: ${data.name}\nTelefon: ${data.phone}\nAdresa: ${data.address}\n\nMesaj: ${data.message}\n\n⚠️ CERERE URGENTĂ - INTERVENȚIE RAPIDĂ NECESARĂ!`;
     const whatsappUrl = `https://wa.me/40752399616?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     reset();
@@ -47,7 +53,7 @@ export function ContactForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-md p-8">
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Nume complet *
@@ -81,6 +87,22 @@ export function ContactForm() {
               </div>
 
               <div>
+                <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-2">
+                  Cartierul sau adresa aproximativă *
+                </label>
+                <input
+                  {...register('address')}
+                  type="text"
+                  id="address"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
+                  placeholder="Ex: Copou, Șoseaua Pavel Dimitrie Kiseleff 10"
+                />
+                {errors.address && (
+                  <p className="mt-1 text-sm text-red-600">{errors.address.message}</p>
+                )}
+              </div>
+
+              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Mesaj / Descriere problemă *
                 </label>
@@ -96,14 +118,26 @@ export function ContactForm() {
                 )}
               </div>
 
-              <Button
-                type="submit"
-                variant="primary"
-                size="lg"
-                className="w-full"
-              >
-                Trimite pe WhatsApp
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  type="button"
+                  variant="primary"
+                  size="lg"
+                  className="flex-1"
+                  onClick={handleSubmit(handleNormalSubmit)}
+                >
+                  Trimite pe WhatsApp
+                </Button>
+                <Button
+                  type="button"
+                  variant="secondary"
+                  size="lg"
+                  className="flex-1 bg-red-600 hover:bg-red-700 focus:ring-red-500"
+                  onClick={handleSubmit(handleUrgentSubmit)}
+                >
+                  🚨 URGENT
+                </Button>
+              </div>
             </form>
           </div>
 
