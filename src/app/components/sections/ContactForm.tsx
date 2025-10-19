@@ -25,14 +25,14 @@ export function ContactForm() {
   });
 
   const handleNormalSubmit = (data: ContactFormInputs) => {
-    const whatsappMessage = `Salut! Nume: ${data.name}\nTelefon: ${data.phone}\nAdresa: ${data.address}\nMesaj: ${data.message}`;
+    const whatsappMessage = `*PascalConfort - Cerere Ofertă Instalator Iași*\n\n*Mesaj:* *${data.message}*\n\n*Adresa:* ${data.address}\n\n*Nume:* ${data.name}\n*Telefon:* ${data.phone}`;
     const whatsappUrl = `https://wa.me/40752399616?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     reset();
   };
 
   const handleUrgentSubmit = (data: ContactFormInputs) => {
-    const whatsappMessage = `🚨 URGENT! 🚨\n\nNume: ${data.name}\nTelefon: ${data.phone}\nAdresa: ${data.address}\n\nMesaj: ${data.message}\n\n⚠️ CERERE URGENTĂ - INTERVENȚIE RAPIDĂ NECESARĂ!`;
+    const whatsappMessage = `*PascalConfort - Cerere Ofertă Instalator Iași* 🚨 *URGENT!*\n\n*Mesaj:* *${data.message}*\n\n*Adresa:* ${data.address}\n\n*Nume:* ${data.name}\n*Telefon:* ${data.phone}\n\n🚨 CERERE URGENTĂ - INTERVENȚIE RAPIDĂ NECESARĂ!`;
     const whatsappUrl = `https://wa.me/40752399616?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     reset();
@@ -118,12 +118,12 @@ export function ContactForm() {
                 )}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col gap-4">
                 <Button
                   type="button"
                   variant="primary"
                   size="lg"
-                  className="flex-1"
+                  className="w-full"
                   onClick={handleSubmit(handleNormalSubmit)}
                 >
                   Trimite pe WhatsApp
@@ -132,7 +132,7 @@ export function ContactForm() {
                   type="button"
                   variant="secondary"
                   size="lg"
-                  className="flex-1 bg-red-600 hover:bg-red-700 focus:ring-red-500"
+                  className="w-full bg-red-600 hover:bg-red-700 focus:ring-red-500"
                   onClick={handleSubmit(handleUrgentSubmit)}
                 >
                   🚨 URGENT
