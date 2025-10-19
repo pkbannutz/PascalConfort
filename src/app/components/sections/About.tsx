@@ -10,7 +10,7 @@ export function About() {
             <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <Image
                 src="/images/daniel-pascal.jpg"
-                alt="Daniel Pascal - Instalator autorizat Iași cu 15+ ani experiență"
+                alt="Daniel Pascal - Instalator autorizat Iași cu 30+ ani experiență"
                 fill
                 className="object-cover"
               />

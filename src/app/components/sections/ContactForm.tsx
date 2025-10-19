@@ -56,7 +56,7 @@ export function ContactForm() {
                   {...register('name')}
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
                   placeholder="Numele dumneavoastră"
                 />
                 {errors.name && (
@@ -72,7 +72,7 @@ export function ContactForm() {
                   {...register('phone')}
                   type="tel"
                   id="phone"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
                   placeholder="+40 7XX XXX XXX"
                 />
                 {errors.phone && (
@@ -88,7 +88,7 @@ export function ContactForm() {
                   {...register('message')}
                   id="message"
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
                   placeholder="Descrieți lucrarea sau problema..."
                 />
                 {errors.message && (

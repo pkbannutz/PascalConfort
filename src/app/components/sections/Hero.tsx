@@ -14,6 +14,10 @@ export function Hero() {
                 Instalator Autorizat Iași
                 <span className="hidden md:block text-blue-900">Urgențe Non-Stop</span>
               </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl">
+                Intervenții rapide pentru instalații sanitare și termice în Iași.
+                Reparații, montaj centrale, desfundări. Seriozitate și garanție pe toate lucrările.
+              </p>
               {/* Mobile Image */}
               <div className="relative lg:hidden mb-8">
                 <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
@@ -32,10 +36,6 @@ export function Hero() {
                   </div>
                 </ScrollReveal>
               </div>
-              <p className="text-xl text-gray-600 mb-8 max-w-2xl">
-                Intervenții rapide pentru instalații sanitare și termice în Iași.
-                Reparații, montaj centrale, desfundări. Seriozitate și garanție pe toate lucrările.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button
                   variant="primary"
