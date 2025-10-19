@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  // Remove output: 'export' for Vercel deployment
+  // Vercel handles static optimization automatically
   images: {
+    // Keep unoptimized for now, but Vercel can optimize images
     unoptimized: true,
   },
 };
