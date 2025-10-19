@@ -1,11 +1,6 @@
 export function TrustBar() {
   const trustItems = [
     {
-      icon: '🏆',
-      title: 'ANRE Autorizat',
-      description: 'Certificare oficială pentru instalații termice'
-    },
-    {
       icon: '⭐',
       title: 'Experiență 15+ Ani',
       description: 'Lucrări profesioniste în Iași și împrejurimi'

@@ -37,7 +37,7 @@ export function FAQ() {
           <p>Da, ofer garanție pe toate lucrările efectuate:</p>
           <ul className="list-disc list-inside space-y-1 ml-4">
             <li>Instalații sanitare: 2 ani garanție</li>
-            <li>Centrale termice: 3 ani garanție (conform ANRE)</li>
+            <li>Centrale termice: 3 ani garanție</li>
             <li>Reparații: 1 an garanție</li>
             <li>Desfundări: 6 luni garanție</li>
           </ul>
@@ -49,9 +49,8 @@ export function FAQ() {
       question: 'Ce documente aveți pentru lucrări la centrale termice?',
       answer: (
         <p>
-          Sunt autorizat ANRE (Autoritatea Națională de Reglementare în Domeniul Energiei)
-          pentru montaj și service centrale termice. Dețin toate certificatele și autorizațiile
-          necesare pentru lucrări conforme cu normativele în vigoare.
+          Efectuez montaj și service centrale termice cu materiale certificate și conform
+          cu normativele în vigoare.
         </p>
       )
     },

@@ -10,7 +10,6 @@ export function Footer() {
               Instalator sanitar și termic autorizat în Iași. Intervenții rapide pentru urgențe, reparații și montaj centrale.
             </p>
             <div className="text-sm text-gray-400">
-              <p>ANRE Autorizat</p>
               <p>Garanție pe lucrări</p>
               <p>Intervenții non-stop</p>
             </div>

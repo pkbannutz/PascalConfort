@@ -105,23 +105,23 @@ export function Header() {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
                 onClick={() => scrollToSection('servicii')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium"
+                className="block w-full text-left px-2 py-1 text-sm text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium"
               >
                 Servicii
               </button>
               <button
                 onClick={() => scrollToSection('despre')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium"
+                className="block w-full text-left px-2 py-1 text-sm text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium"
               >
                 Despre
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium"
+                className="block w-full text-left px-2 py-1 text-sm text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium"
               >
                 Contact
               </button>
-              <div className="px-3 py-2">
+              <div className="px-2 py-1">
                 <Button
                   variant="secondary"
                   size="sm"

@@ -24,9 +24,8 @@ export function About() {
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Cu peste 15 ani de experiență în instalații sanitare și termice în Iași,
-                ofer servicii profesioniste pentru toate tipurile de lucrări. Sunt autorizat ANRE
-                și certificarea îmi permite să efectuez montaje și reparații la centrale termice.
+                Cu peste 30 ani de experiență în instalații sanitare și termice în Iași,
+                ofer servicii profesioniste pentru toate tipurile de lucrări. Efectuez montaje și reparații la centrale termice.
               </p>
               <p>
                 Am lucrat cu sute de clienți în Iași și împrejurimi, de la apartamente moderne
@@ -42,7 +41,7 @@ export function About() {
 
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <div className="text-2xl font-bold text-blue-900">15+</div>
+                <div className="text-2xl font-bold text-blue-900">30+</div>
                 <div className="text-sm text-gray-600">Ani Experiență</div>
               </div>
               <div className="text-center p-4 bg-orange-50 rounded-lg">

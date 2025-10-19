@@ -19,14 +19,6 @@ export function Portfolio() {
       beforeImage: '/images/portfolio/87960c17a7f18ec03e991442ce4cf6f2.jpg',
       afterImage: '/images/portfolio/cfb4022c80b443cdce678a116b037682.jpg'
     },
-    {
-      id: '3',
-      title: 'Desfundare Profesională',
-      beforeAlt: 'Canalizare blocată în baie Iași',
-      afterAlt: 'Canalizare desfundată și curățată profesional Iași',
-      beforeImage: '/images/portfolio/e2f08cbc36a18bd5c76a8205a7083c64.jpg',
-      afterImage: '/images/portfolio/freepik__remove-text-add-him-overlay-crosing-a-bit-on-top-o__45494.png'
-    }
   ];
 
   return (
@@ -55,9 +47,6 @@ export function Portfolio() {
                       fill
                       className="object-cover"
                     />
-                    <div className="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">
-                      Înainte
-                    </div>
                   </div>
                   <div className="relative h-32">
                     <Image
@@ -66,9 +55,6 @@ export function Portfolio() {
                       fill
                       className="object-cover"
                     />
-                    <div className="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded">
-                      După
-                    </div>
                   </div>
                 </div>
 

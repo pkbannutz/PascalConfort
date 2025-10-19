@@ -30,7 +30,7 @@ export function Services() {
     {
       id: '5',
       title: 'Montaj Centrale Termice',
-      description: 'Instalare centrale noi, înlocuire centrale vechi, racordări la rețea. Lucrări conform normelor ANRE.',
+      description: 'Instalare centrale noi, înlocuire centrale vechi, racordări la rețea. Lucrări conform normelor în vigoare.',
       icon: '🏠'
     },
     {
@@ -60,7 +60,7 @@ export function Services() {
           {services.map((service, index) => (
             <ScrollReveal key={service.id} delay={index * 0.1}>
               <Card hover className="h-full">
-                <CardHeader>
+                <CardHeader className="text-center md:text-left">
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {service.title}

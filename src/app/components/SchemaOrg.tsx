@@ -9,7 +9,7 @@ const jsonLd: WithContext<Plumber> = {
   "@id": "https://pascalconfort.ro",
   "url": "https://pascalconfort.ro",
   "telephone": "+40752399616",
-  "description": "Instalator sanitar și termic autorizat ANRE în Iași. Intervenții rapide pentru urgențe, reparații, montaj centrale. Seriozitate și Garanție.",
+  "description": "Instalator sanitar și termic în Iași. Intervenții rapide pentru urgențe, reparații, montaj centrale. Seriozitate și Garanție.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Strada Exemplu Nr. 10",
