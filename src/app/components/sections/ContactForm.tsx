@@ -16,9 +16,6 @@ const contactSchema = z.object({
 type ContactFormInputs = z.infer<typeof contactSchema>;
 
 export function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
   const {
     register,
     handleSubmit,
@@ -28,25 +25,11 @@ export function ContactForm() {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = async (data: ContactFormInputs) => {
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      // EmailJS integration will be added later
-      console.log('Form data:', data);
-
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-
-      setSubmitStatus('success');
-      reset();
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+  const onSubmit = (data: ContactFormInputs) => {
+    const whatsappMessage = `Salut! Nume: ${data.name}\nTelefon: ${data.phone}\nMesaj: ${data.message}`;
+    const whatsappUrl = `https://wa.me/40752399616?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+    reset();
   };
 
   return (
@@ -118,26 +101,9 @@ export function ContactForm() {
                 variant="primary"
                 size="lg"
                 className="w-full"
-                disabled={isSubmitting}
               >
-                {isSubmitting ? 'Se trimite...' : 'Trimite Mesaj'}
+                Trimite pe WhatsApp
               </Button>
-
-              {submitStatus === 'success' && (
-                <div className="p-4 bg-green-50 border border-green-200 rounded-md">
-                  <p className="text-green-800">
-                    Mesaj trimis cu succes! Vă contactez în cel mai scurt timp.
-                  </p>
-                </div>
-              )}
-
-              {submitStatus === 'error' && (
-                <div className="p-4 bg-red-50 border border-red-200 rounded-md">
-                  <p className="text-red-800">
-                    A apărut o eroare. Vă rog sunați direct la +40 752 399 616.
-                  </p>
-                </div>
-              )}
             </form>
           </div>
 
