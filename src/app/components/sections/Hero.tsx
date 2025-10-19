@@ -44,7 +44,7 @@ export function Hero() {
             <div className="relative">
               <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/hero-plumber.jpg"
+                  src="/images/portfolio/freepik__remove-text-add-him-overlay-crosing-a-bit-on-top-o__45494.png"
                   alt="Instalator autorizat Iași lucrând la instalații sanitare - PascalConfort"
                   fill
                   className="object-cover"

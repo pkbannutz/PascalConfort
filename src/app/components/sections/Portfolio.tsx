@@ -8,24 +8,24 @@ export function Portfolio() {
       title: 'Înlocuire Centrală Termică',
       beforeAlt: 'Centrală termică veche defectă în baie Iași',
       afterAlt: 'Centrală termică nouă montată profesional în Iași',
-      beforeImage: '/images/portfolio/centrala-before.jpg',
-      afterImage: '/images/portfolio/centrala-after.jpg'
+      beforeImage: '/images/portfolio/1e12e89bf7bdce548ff2b302e762efcd.jpg',
+      afterImage: '/images/portfolio/41f6f66a97b86cf219e690c6cf8cc684.jpg'
     },
     {
       id: '2',
       title: 'Reparație Instalații Sanitare',
       beforeAlt: 'Instalații sanitare deteriorate în bucătărie Iași',
       afterAlt: 'Instalații sanitare complet renovate în Iași',
-      beforeImage: '/images/portfolio/sanitare-before.jpg',
-      afterImage: '/images/portfolio/sanitare-after.jpg'
+      beforeImage: '/images/portfolio/87960c17a7f18ec03e991442ce4cf6f2.jpg',
+      afterImage: '/images/portfolio/cfb4022c80b443cdce678a116b037682.jpg'
     },
     {
       id: '3',
       title: 'Desfundare Profesională',
       beforeAlt: 'Canalizare blocată în baie Iași',
       afterAlt: 'Canalizare desfundată și curățată profesional Iași',
-      beforeImage: '/images/portfolio/desfundare-before.jpg',
-      afterImage: '/images/portfolio/desfundare-after.jpg'
+      beforeImage: '/images/portfolio/e2f08cbc36a18bd5c76a8205a7083c64.jpg',
+      afterImage: '/images/portfolio/freepik__remove-text-add-him-overlay-crosing-a-bit-on-top-o__45494.png'
     }
   ];
 
