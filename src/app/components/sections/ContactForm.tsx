@@ -10,7 +10,10 @@ import { CONTACT_INFO, WHATSAPP_MESSAGES } from '@/app/lib/constants';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Numele trebuie să aibă cel puțin 2 caractere'),
-  phone: z.string().regex(/^(\+40 \d{2} \d{3} \d{4}|07\d{2} \d{3} \d{3})$/, 'Format invalid. Folosiți +40 XX XXX XXXX sau 07XX XXX XXX'),
+  // Acceptă orice număr de telefon rezonabil: cifre, spații, +, -, paranteze; minim 7 caractere utile
+  phone: z
+    .string()
+    .regex(/^\s*\+?\s*[\d\s().-]{6,}\s*$/, 'Introduceți un număr de telefon valid'),
   address: z.string().min(5, 'Adresa trebuie să aibă cel puțin 5 caractere'),
   message: z.string().min(10, 'Mesajul trebuie să aibă cel puțin 10 caractere'),
 });
@@ -117,7 +120,7 @@ export function ContactForm({ hideTitle = false, hideNormalButton = false, hideC
                   type="tel"
                   id="phone"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
-                  placeholder="+40 7XX XXX XXX"
+                  placeholder="Număr de telefon"
                 />
               </FormInput>
 

@@ -36,8 +36,8 @@ export function TrustBar() {
           </div>
           <TrustItem {...trustItems[1]} />
         </div>
-        {/* Desktop: Grid layout */}
-        <div className="hidden lg:grid lg:grid-cols-4 gap-6">
+        {/* Desktop: Grid layout (centered) */}
+        <div className="hidden lg:grid lg:grid-cols-3 gap-6 lg:max-w-fit lg:mx-auto">
           {trustItems.map((item, index) => (
             <TrustItem key={index} {...item} />
           ))}
