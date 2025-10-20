@@ -87,29 +87,6 @@ export function EmergencyMode() {
         </div>
       </div>
 
-      {/* Contact Info */}
-      <div className="py-4 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div>
-              <h3 className="font-semibold text-gray-800 mb-2">Contact Direct</h3>
-              <p className="text-gray-600">Telefon</p>
-              <p className="font-semibold text-red-600">{CONTACT_INFO.phone}</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-800 mb-2">WhatsApp</h3>
-              <p className="text-gray-600">Mesaj rapid</p>
-              <p className="font-semibold text-red-600">{CONTACT_INFO.phone}</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-800 mb-2">Urgențe 24/7</h3>
-              <p className="text-gray-600 text-sm">
-                Pentru situații de urgență (țevi sparte, inundații, centrale defecte), sunați direct. Intervin rapid în toată zona Iași.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
