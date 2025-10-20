@@ -19,6 +19,7 @@ type ContactFormInputs = z.infer<typeof contactSchema>;
 
 interface ContactFormProps {
   hideTitle?: boolean;
+  hideNormalButton?: boolean;
 }
 
 const FormInput = ({ label, error, children }: { label: string; error?: { message?: string }; children: React.ReactNode }) => (
@@ -33,7 +34,7 @@ const FormInput = ({ label, error, children }: { label: string; error?: { messag
   </div>
 );
 
-export function ContactForm({ hideTitle = false }: ContactFormProps) {
+export function ContactForm({ hideTitle = false, hideNormalButton = false }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -140,16 +141,18 @@ export function ContactForm({ hideTitle = false }: ContactFormProps) {
               </FormInput>
 
               <div className="flex flex-col gap-4">
-                <Button
-                  type="submit"
-                  variant="primary"
-                  size="lg"
-                  className="w-full"
-                  disabled={isSubmitting}
-                  onClick={handleSubmit(handleNormalSubmit)}
-                >
-                  {isSubmitting ? 'Se trimite...' : 'Trimite Cerere Ofertă'}
-                </Button>
+                {!hideNormalButton && (
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    size="lg"
+                    className="w-full"
+                    disabled={isSubmitting}
+                    onClick={handleSubmit(handleNormalSubmit)}
+                  >
+                    {isSubmitting ? 'Se trimite...' : 'Trimite Cerere Ofertă'}
+                  </Button>
+                )}
 
                 <Button
                   type="button"

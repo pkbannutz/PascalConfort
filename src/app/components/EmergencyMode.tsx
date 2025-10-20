@@ -83,12 +83,12 @@ export function EmergencyMode() {
               Completează formularul pentru o estimare rapidă și programare urgentă
             </p>
           </div>
-          <ContactForm hideTitle={true} />
+          <ContactForm hideTitle={true} hideNormalButton={true} />
         </div>
       </div>
 
-      {/* Contact Info - Hidden on mobile */}
-      <div className="py-4 px-4 bg-gray-50 hidden md:block">
+      {/* Contact Info */}
+      <div className="py-4 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
