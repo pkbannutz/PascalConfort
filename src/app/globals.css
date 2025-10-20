@@ -6,8 +6,8 @@
 }
 
 .theme-emergency {
-  --color-primary: #dc2626;
-  --color-accent: #ef4444;
+  --color-primary: #ffffff;
+  --color-accent: #ffffff;
 }
 
 @theme inline {

@@ -126,17 +126,6 @@ export function ContactForm({ hideTitle = false, hideWhatsAppButton = false }: C
               </div>
 
               <div className="flex flex-col gap-4">
-                {!hideWhatsAppButton && (
-                  <Button
-                    type="button"
-                    variant="primary"
-                    size="lg"
-                    className="w-full"
-                    onClick={handleSubmit(handleNormalSubmit)}
-                  >
-                    Trimite pe WhatsApp
-                  </Button>
-                )}
                 <Button
                   type="button"
                   variant="secondary"

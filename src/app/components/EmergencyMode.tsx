@@ -35,7 +35,7 @@ export function EmergencyMode() {
               <Button
                 variant="secondary"
                 href="https://wa.me/40752399616"
-                className="bg-white text-red-600 border border-red-600 hover:bg-red-50"
+                className="bg-green-600 text-white border border-green-600 hover:bg-green-700"
               >
                 💬 WhatsApp
               </Button>
@@ -45,21 +45,21 @@ export function EmergencyMode() {
       </div>
 
       {/* Emergency Services */}
-      <div className="py-8 px-4">
+      <div className="py-4 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 gap-4 mb-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
-              <h3 className="text-lg font-semibold text-red-800 mb-3">🚰 Urgențe Apa</h3>
-              <ul className="text-gray-700 space-y-1 text-sm">
+          <div className="grid grid-cols-2 gap-2 mb-4">
+            <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-red-500">
+              <h3 className="text-base font-semibold text-red-800 mb-2">🚰 Urgențe Apa</h3>
+              <ul className="text-gray-700 space-y-1 text-xs">
                 <li>• Înlocuire robinete sparte</li>
                 <li>• Reparații conducte de apă</li>
                 <li>• Deblocări urgente</li>
                 <li>• Scurgere apă caldă</li>
               </ul>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
-              <h3 className="text-lg font-semibold text-red-800 mb-3">🔥 Urgențe Termice</h3>
-              <ul className="text-gray-700 space-y-1 text-sm">
+            <div className="bg-white p-4 rounded-lg shadow-md border-l-4 border-red-500">
+              <h3 className="text-base font-semibold text-red-800 mb-2">🔥 Urgențe Termice</h3>
+              <ul className="text-gray-700 space-y-1 text-xs">
                 <li>• Reparații boiler</li>
                 <li>• Probleme încălzire</li>
                 <li>• Înlocuire calorifere</li>
@@ -71,13 +71,13 @@ export function EmergencyMode() {
       </div>
 
       {/* Contact Form */}
-      <div className="py-8 px-4">
+      <div className="py-4 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold mb-2 text-red-800">
+          <div className="text-center mb-4">
+            <h2 className="text-xl font-bold mb-2 text-red-800">
               Solicită Intervenție Rapidă
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-sm">
               Completează formularul pentru o estimare rapidă și programare urgentă
             </p>
           </div>
@@ -85,8 +85,8 @@ export function EmergencyMode() {
         </div>
       </div>
 
-      {/* Contact Info */}
-      <div className="py-8 px-4 bg-gray-50">
+      {/* Contact Info - Hidden on mobile */}
+      <div className="py-4 px-4 bg-gray-50 hidden md:block">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
