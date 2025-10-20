@@ -31,7 +31,7 @@
           - textbox "Numele dumneavoastră" [ref=e39]
         - generic [ref=e40]:
           - generic [ref=e41]: Număr telefon *
-          - textbox "+40 7XX XXX XXX" [ref=e42]
+          - textbox "Număr de telefon" [ref=e42]
         - generic [ref=e43]:
           - generic [ref=e44]: Cartierul sau adresa aproximativă *
           - 'textbox "Ex: Copou, Șoseaua Pavel Dimitrie Kiseleff 10" [ref=e45]'
