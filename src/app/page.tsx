@@ -13,14 +13,22 @@ import { EmergencyMode } from './components/EmergencyMode';
 import { useEmergencyStore } from './hooks/useEmergencyStore';
 
 export default function Home() {
-  const { isEmergency } = useEmergencyStore();
+  const { isEmergency, isTransitioning } = useEmergencyStore();
 
   if (isEmergency) {
-    return <EmergencyMode />;
+    return (
+      <div className={`min-h-screen transition-opacity duration-300 ${
+        isTransitioning ? 'opacity-0' : 'opacity-100'
+      }`}>
+        <EmergencyMode />
+      </div>
+    );
   }
 
   return (
-    <div className="min-h-screen">
+    <div className={`min-h-screen transition-opacity duration-300 ${
+      isTransitioning ? 'opacity-0' : 'opacity-100'
+    }`}>
       <Header />
       <main>
         <Hero />

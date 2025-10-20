@@ -7,7 +7,7 @@ import { CONTACT_INFO, WHATSAPP_MESSAGES, COMPANY_INFO } from '@/app/lib/constan
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isEmergency, toggleEmergency } = useEmergencyStore();
+  const { isEmergency, toggleEmergency, isTransitioning } = useEmergencyStore();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -15,6 +15,15 @@ export function Header() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
+  };
+
+  const navigateToSection = async (sectionId: string) => {
+    if (isEmergency) {
+      await toggleEmergency();
+      setTimeout(() => scrollToSection(sectionId), 100);
+    } else {
+      scrollToSection(sectionId);
+    }
   };
 
   return (
@@ -29,20 +38,29 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button
-              onClick={() => scrollToSection('servicii')}
-              className="text-gray-700 hover:text-blue-900 font-medium transition-colors"
+              onClick={() => navigateToSection('servicii')}
+              disabled={isTransitioning}
+              className={`text-gray-700 hover:text-blue-900 font-medium transition-colors ${
+                isTransitioning ? 'pointer-events-none opacity-50' : ''
+              }`}
             >
               Servicii
             </button>
             <button
-              onClick={() => scrollToSection('despre')}
-              className="text-gray-700 hover:text-blue-900 font-medium transition-colors"
+              onClick={() => navigateToSection('despre')}
+              disabled={isTransitioning}
+              className={`text-gray-700 hover:text-blue-900 font-medium transition-colors ${
+                isTransitioning ? 'pointer-events-none opacity-50' : ''
+              }`}
             >
               Despre
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-blue-900 font-medium transition-colors"
+              onClick={() => navigateToSection('contact')}
+              disabled={isTransitioning}
+              className={`text-gray-700 hover:text-blue-900 font-medium transition-colors ${
+                isTransitioning ? 'pointer-events-none opacity-50' : ''
+              }`}
             >
               Contact
             </button>
@@ -53,14 +71,15 @@ export function Header() {
             {/* Emergency Toggle */}
             <button
               onClick={toggleEmergency}
+              disabled={isTransitioning}
               className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                 isEmergency
                   ? 'bg-blue-600 text-white hover:bg-blue-700'
                   : 'bg-red-600 text-white hover:bg-red-700'
-              }`}
+              } ${isTransitioning ? 'opacity-50 cursor-not-allowed' : ''}`}
               aria-label={isEmergency ? 'Dezactivează mod urgență' : 'Activează mod urgență'}
             >
-              {isEmergency ? 'Normal' : 'Urgent'}
+              {isTransitioning ? '...' : (isEmergency ? 'Normal' : 'Urgent')}
             </button>
 
 
@@ -93,8 +112,10 @@ export function Header() {
               ].map(({ label, section }) => (
                 <button
                   key={section}
-                  onClick={() => scrollToSection(section)}
-                  className="block w-full text-left px-2 py-1 text-sm text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium"
+                  onClick={() => navigateToSection(section)}
+                  className={`block w-full text-left px-2 py-1 text-sm text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium ${
+                    isTransitioning ? 'pointer-events-none opacity-50' : ''
+                  }`}
                 >
                   {label}
                 </button>

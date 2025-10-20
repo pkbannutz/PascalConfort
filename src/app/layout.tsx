@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { SchemaOrg } from "./components/SchemaOrg";
 import { EmergencyProvider } from "./components/EmergencyProvider";
+import { TransitionOverlay } from "./components/TransitionOverlay";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -47,6 +48,7 @@ export default function RootLayout({
       >
         <EmergencyProvider>
           {children}
+          <TransitionOverlay />
         </EmergencyProvider>
       </body>
     </html>
