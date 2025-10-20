@@ -16,9 +16,10 @@ type ContactFormInputs = z.infer<typeof contactSchema>;
 
 interface ContactFormProps {
   hideTitle?: boolean;
+  hideWhatsAppButton?: boolean;
 }
 
-export function ContactForm({ hideTitle = false }: ContactFormProps) {
+export function ContactForm({ hideTitle = false, hideWhatsAppButton = false }: ContactFormProps) {
   const {
     register,
     handleSubmit,
@@ -125,15 +126,17 @@ export function ContactForm({ hideTitle = false }: ContactFormProps) {
               </div>
 
               <div className="flex flex-col gap-4">
-                <Button
-                  type="button"
-                  variant="primary"
-                  size="lg"
-                  className="w-full"
-                  onClick={handleSubmit(handleNormalSubmit)}
-                >
-                  Trimite pe WhatsApp
-                </Button>
+                {!hideWhatsAppButton && (
+                  <Button
+                    type="button"
+                    variant="primary"
+                    size="lg"
+                    className="w-full"
+                    onClick={handleSubmit(handleNormalSubmit)}
+                  >
+                    Trimite pe WhatsApp
+                  </Button>
+                )}
                 <Button
                   type="button"
                   variant="secondary"

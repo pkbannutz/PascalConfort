@@ -35,7 +35,7 @@ export function EmergencyMode() {
               <Button
                 variant="secondary"
                 href="https://wa.me/40752399616"
-                className="bg-white text-red-600 border-red-600 hover:bg-red-50"
+                className="bg-white text-red-600 border border-red-600 hover:bg-red-50"
               >
                 💬 WhatsApp
               </Button>
@@ -47,7 +47,7 @@ export function EmergencyMode() {
       {/* Emergency Services */}
       <div className="py-8 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-2 gap-4 mb-8">
             <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-red-500">
               <h3 className="text-lg font-semibold text-red-800 mb-3">🚰 Urgențe Apa</h3>
               <ul className="text-gray-700 space-y-1 text-sm">
@@ -81,7 +81,7 @@ export function EmergencyMode() {
               Completează formularul pentru o estimare rapidă și programare urgentă
             </p>
           </div>
-          <ContactForm hideTitle={true} />
+          <ContactForm hideTitle={true} hideWhatsAppButton={true} />
         </div>
       </div>
 
