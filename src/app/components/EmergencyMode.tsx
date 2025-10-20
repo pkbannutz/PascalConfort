@@ -7,10 +7,8 @@ import { CONTACT_INFO, WHATSAPP_MESSAGES, COMPANY_INFO } from '@/app/lib/constan
 
 export function EmergencyMode() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-8">
       <Header />
-      {/* Footer removed in emergency mode */}
-
       {/* Contact Info Bar */}
       <div className="bg-red-50 py-6 px-4 border-b border-red-200 pt-16">
         <div className="max-w-4xl mx-auto">
@@ -38,6 +36,8 @@ export function EmergencyMode() {
           </div>
         </div>
       </div>
+      {/* Footer removed in emergency mode */}
+
 
       {/* Emergency Services */}
       <div className="py-4 px-4">
@@ -67,7 +67,7 @@ export function EmergencyMode() {
 
       {/* Contact Form */}
       <div className="py-4 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-4">
             <h2 className="text-xl font-bold mb-2 text-red-800">
               Solicită Intervenție Rapidă
