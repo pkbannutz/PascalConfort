@@ -24,26 +24,9 @@ export function Button({
   const baseClasses = 'inline-flex items-center justify-center font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
   const variantClasses = {
-    primary: 'text-white focus:ring-blue-500',
-    secondary: 'text-white focus:ring-orange-500',
+    primary: 'bg-blue-900 text-white hover:bg-blue-800 focus:ring-blue-500',
+    secondary: 'bg-orange-500 text-white hover:bg-orange-600 focus:ring-orange-500',
     outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-blue-500',
-  };
-
-  const getVariantStyle = (variant: string) => {
-    switch (variant) {
-      case 'primary':
-        return {
-          backgroundColor: 'var(--color-primary)',
-          ':hover': { backgroundColor: 'var(--color-accent)' }
-        };
-      case 'secondary':
-        return {
-          backgroundColor: 'var(--color-accent)',
-          ':hover': { backgroundColor: 'var(--color-primary)' }
-        };
-      default:
-        return {};
-    }
   };
 
   const sizeClasses = {
@@ -53,11 +36,10 @@ export function Button({
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-  const style = getVariantStyle(variant);
 
   if (href) {
     return (
-      <a href={href} className={classes} style={style}>
+      <a href={href} className={classes}>
         {children}
       </a>
     );
@@ -69,7 +51,6 @@ export function Button({
       onClick={onClick}
       disabled={disabled}
       className={classes}
-      style={style}
     >
       {children}
     </button>

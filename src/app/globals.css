@@ -3,13 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-primary: #1e40af;
-  --color-accent: #3b82f6;
 }
 
 .theme-emergency {
-  --background: #fef2f2;
-  --foreground: #7f1d1d;
   --color-primary: #dc2626;
   --color-accent: #ef4444;
 }

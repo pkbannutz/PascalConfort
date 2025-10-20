@@ -1,11 +1,13 @@
 "use client";
 
+import { Header } from './layout/Header';
 import { ContactForm } from './sections/ContactForm';
 import { Button } from './ui/Button';
 
 export function EmergencyMode() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--background)' }}>
+    <div className="min-h-screen">
+      <Header />
       {/* Emergency Header */}
       <div className="bg-red-600 text-white py-4 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -61,7 +63,7 @@ export function EmergencyMode() {
                 <li>• Reparații boiler</li>
                 <li>• Probleme încălzire</li>
                 <li>• Înlocuire calorifere</li>
-                <li>• Reparații instalații gaz</li>
+                <li>• Reparații instalații termice</li>
               </ul>
             </div>
           </div>
@@ -69,10 +71,10 @@ export function EmergencyMode() {
       </div>
 
       {/* Contact Form */}
-      <div className="py-8 px-4" style={{ backgroundColor: 'var(--background)' }}>
+      <div className="py-8 px-4">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold mb-2" style={{ color: 'var(--color-primary)' }}>
+            <h2 className="text-2xl font-bold mb-2 text-red-800">
               Solicită Intervenție Rapidă
             </h2>
             <p className="text-gray-600">
