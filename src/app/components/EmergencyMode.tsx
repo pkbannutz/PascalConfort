@@ -25,19 +25,28 @@ export function EmergencyMode() {
               >
                 📞 Sună Acum
               </Button>
-              <Button
-                variant="secondary"
-                href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(WHATSAPP_MESSAGES.urgent)}`}
-                className="bg-green-600 text-white border border-green-600 hover:bg-green-700"
-              >
-                💬 WhatsApp
-              </Button>
             </div>
           </div>
         </div>
       </div>
       {/* Footer removed in emergency mode */}
 
+
+
+      {/* Contact Form */}
+      <div className="py-4 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-4">
+            <h2 className="text-xl font-bold mb-2 text-red-800">
+              Solicită Intervenție Rapidă
+            </h2>
+            <p className="text-gray-600 text-sm">
+              Completează formularul pentru o estimare rapidă și programare urgentă
+            </p>
+          </div>
+          <ContactForm hideTitle={true} hideNormalButton={true} hideContactInfo={true} />
+        </div>
+      </div>
 
       {/* Emergency Services */}
       <div className="py-4 px-4">
@@ -62,21 +71,6 @@ export function EmergencyMode() {
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Contact Form */}
-      <div className="py-4 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-4">
-            <h2 className="text-xl font-bold mb-2 text-red-800">
-              Solicită Intervenție Rapidă
-            </h2>
-            <p className="text-gray-600 text-sm">
-              Completează formularul pentru o estimare rapidă și programare urgentă
-            </p>
-          </div>
-          <ContactForm hideTitle={true} hideNormalButton={true} hideContactInfo={true} />
         </div>
       </div>
 
@@ -122,7 +116,7 @@ export function EmergencyMode() {
 
             <div className="bg-blue-50 p-6 rounded-lg">
               <h4 className="font-semibold text-gray-900 mb-2">Urgențe 24/7</h4>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-sm text-center">
                 Pentru situații de urgență (țevi sparte, inundații, centrale defecte),
                 sunați direct. Intervin rapid în toată zona Iași.
               </p>
