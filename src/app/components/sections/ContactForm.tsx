@@ -20,6 +20,7 @@ type ContactFormInputs = z.infer<typeof contactSchema>;
 interface ContactFormProps {
   hideTitle?: boolean;
   hideNormalButton?: boolean;
+  hideContactInfo?: boolean;
 }
 
 const FormInput = ({ label, error, children }: { label: string; error?: { message?: string }; children: React.ReactNode }) => (
@@ -34,7 +35,7 @@ const FormInput = ({ label, error, children }: { label: string; error?: { messag
   </div>
 );
 
-export function ContactForm({ hideTitle = false, hideNormalButton = false }: ContactFormProps) {
+export function ContactForm({ hideTitle = false, hideNormalButton = false, hideContactInfo = false }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -96,9 +97,9 @@ export function ContactForm({ hideTitle = false, hideNormalButton = false }: Con
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className={`grid grid-cols-1 ${hideContactInfo ? '' : 'lg:grid-cols-2'} gap-12`}>
           {/* Contact Form */}
-          <div className="bg-white rounded-lg shadow-md p-8">
+          <div className={`bg-white rounded-lg shadow-md p-8 ${hideContactInfo ? 'max-w-2xl mx-auto' : ''}`}>
             <form className="space-y-6">
               <FormInput label="Nume complet *" error={errors.name}>
                 <input
@@ -184,7 +185,8 @@ export function ContactForm({ hideTitle = false, hideNormalButton = false }: Con
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-8">
+          {!hideContactInfo && (
+            <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Contact Direct
@@ -228,7 +230,8 @@ export function ContactForm({ hideTitle = false, hideNormalButton = false }: Con
                 sunați direct. Intervin rapid în toată zona Iași.
               </p>
             </div>
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
