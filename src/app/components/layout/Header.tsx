@@ -54,12 +54,12 @@ export function Header() {
               onClick={toggleEmergency}
               className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                 isEmergency
-                  ? 'bg-red-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  ? 'bg-blue-600 text-white hover:bg-blue-700'
+                  : 'bg-red-600 text-white hover:bg-red-700'
               }`}
               aria-label={isEmergency ? 'Dezactivează mod urgență' : 'Activează mod urgență'}
             >
-              {isEmergency ? 'Urgență' : 'Normal'}
+              {isEmergency ? 'Normal' : 'Urgent'}
             </button>
 
             {/* WhatsApp Button */}

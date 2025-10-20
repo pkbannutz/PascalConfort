@@ -72,7 +72,7 @@ export function EmergencyMode() {
 
       {/* Contact Form */}
       <div className="py-8 px-4">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-6">
             <h2 className="text-2xl font-bold mb-2 text-red-800">
               Solicită Intervenție Rapidă
@@ -85,11 +85,27 @@ export function EmergencyMode() {
         </div>
       </div>
 
-      {/* Footer Info */}
-      <div className="bg-gray-50 py-6 px-4 mt-8">
-        <div className="max-w-4xl mx-auto text-center text-gray-600">
-          <p className="font-semibold mb-2">Garanție pentru toate serviciile</p>
-          <p className="text-sm">Materiale de calitate • Echipamente profesionale • Intervenție rapidă</p>
+      {/* Contact Info */}
+      <div className="py-8 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <h3 className="font-semibold text-gray-800 mb-2">Contact Direct</h3>
+              <p className="text-gray-600">Telefon</p>
+              <p className="font-semibold text-red-600">+40 752 399 616</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-800 mb-2">WhatsApp</h3>
+              <p className="text-gray-600">Mesaj rapid</p>
+              <p className="font-semibold text-red-600">+40 752 399 616</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-800 mb-2">Urgențe 24/7</h3>
+              <p className="text-gray-600 text-sm">
+                Pentru situații de urgență (țevi sparte, inundații, centrale defecte), sunați direct. Intervin rapid în toată zona Iași.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
