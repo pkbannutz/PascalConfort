@@ -43,7 +43,7 @@ export function About() {
                 <div className="text-sm text-gray-600">Ani Experiență</div>
               </div>
               <div className="text-center p-4 bg-orange-50 rounded-lg">
-                <div className="text-2xl font-bold text-orange-600">1000+</div>
+                <div className="text-2xl font-bold text-orange-600">500+</div>
                 <div className="text-sm text-gray-600">Clienți Mulțumiți</div>
               </div>
             </div>
