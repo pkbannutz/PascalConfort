@@ -10,13 +10,6 @@ export function EmergencyMode() {
     <div className="min-h-screen bg-white">
       <Header />
       {/* Footer removed in emergency mode */}
-      {/* Emergency Header */}
-      <div className="bg-red-600 text-white py-8 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-2xl font-bold mb-2">🚨 URGENȚĂ PLUMBING</h1>
-          <p className="text-lg">Intervenție rapidă - Disponibil 24/7</p>
-        </div>
-      </div>
 
       {/* Contact Info Bar */}
       <div className="bg-red-50 py-6 px-4 border-b border-red-200">
