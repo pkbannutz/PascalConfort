@@ -63,24 +63,6 @@ export function Header() {
               {isEmergency ? 'Normal' : 'Urgent'}
             </button>
 
-            {/* WhatsApp Button */}
-            <Button
-              variant="secondary"
-              size="sm"
-              href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(isEmergency ? WHATSAPP_MESSAGES.urgent : WHATSAPP_MESSAGES.normal)}`}
-              className="hidden sm:inline-flex"
-            >
-              WhatsApp
-            </Button>
-
-            {/* Call Button */}
-            <Button
-              variant="primary"
-              size="sm"
-              href={`tel:${CONTACT_INFO.phone}`}
-            >
-              Sună Acum
-            </Button>
 
             {/* Mobile Menu Button */}
             <button
@@ -117,16 +99,6 @@ export function Header() {
                   {label}
                 </button>
               ))}
-              <div className="px-2 py-1">
-                <Button
-                  variant="secondary"
-                  size="sm"
-                  href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(isEmergency ? WHATSAPP_MESSAGES.urgent : WHATSAPP_MESSAGES.normal)}`}
-                  className="w-full mb-2"
-                >
-                  WhatsApp
-                </Button>
-              </div>
             </div>
           </div>
         )}
