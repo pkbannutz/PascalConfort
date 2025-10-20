@@ -9,8 +9,8 @@ export function About() {
           <div className="relative">
             <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/images/daniel-pascal.jpg"
-                alt="Daniel Pascal - Instalator autorizat Iași cu 30+ ani experiență"
+                src="/images/portfolio/freepik__remove-text-add-him-overlay-crosing-a-bit-on-top-o__45494.png"
+                alt="Daniel Pascal - Professional plumber with 30+ years experience in plumbing and heating in Iași and UK"
                 fill
                 className="object-cover"
               />
@@ -24,18 +24,13 @@ export function About() {
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Cu peste 30 ani de experiență în instalații sanitare și termice în Iași,
-                ofer servicii profesioniste pentru toate tipurile de lucrări. Efectuez montaje și reparații la centrale termice.
+                With over 30 years of experience in plumbing and heating, Daniel Pascal has been providing professional services in Iași and beyond. He spent 14+ years at APAVITAL S.A. Iaşi, gaining extensive expertise in the field.
               </p>
               <p>
-                Am lucrat cu sute de clienți în Iași și împrejurimi, de la apartamente moderne
-                până la case tradiționale. Prioritatea mea este calitatea lucrărilor și
-                satisfacția clienților mei.
+                Following that, he worked for 15 years in the UK, utilizing professional tools and equipment to serve a diverse clientele. Having served hundreds of clients, Daniel is committed to quality and customer satisfaction.
               </p>
               <p>
-                Intervin rapid la urgențe și ofer garanție pe toate serviciile prestate.
-                Folosesc doar materiale de calitate și echipamente profesionale pentru
-                rezultate durabile.
+                He offers rapid emergency response and provides quality guarantees on all services. Using only professional materials and equipment, Daniel ensures durable and reliable results for every project.
               </p>
             </div>
 
@@ -45,7 +40,7 @@ export function About() {
                 <div className="text-sm text-gray-600">Ani Experiență</div>
               </div>
               <div className="text-center p-4 bg-orange-50 rounded-lg">
-                <div className="text-2xl font-bold text-orange-600">1000+</div>
+                <div className="text-2xl font-bold text-orange-600">Hundreds</div>
                 <div className="text-sm text-gray-600">Clienți Mulțumiți</div>
               </div>
             </div>
