@@ -20,7 +20,7 @@ export function About() {
           {/* Content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Despre Mine – Daniel Pascal
+              Despre – Daniel Pascal
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
