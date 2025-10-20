@@ -4,13 +4,13 @@ import { ScrollReveal } from '@/app/components/ui/ScrollReveal';
 
 export function Hero() {
   return (
-    <section className="pt-16 bg-gradient-to-br from-blue-50 to-white">
+    <section className="pt-16" style={{ background: 'linear-gradient(to bottom right, var(--color-accent), var(--background))' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <ScrollReveal direction="left">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: 'var(--foreground)' }}>
                 Instalator Autorizat Iași
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl">
