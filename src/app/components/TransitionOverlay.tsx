@@ -28,12 +28,12 @@ export function TransitionOverlay() {
       }`}>
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
         <h3 className="text-lg font-semibold text-gray-900 mb-2">
-          {isEmergency ? 'Trecere la Mod Normal' : 'Trecere la Mod Urgență'}
+          {!isEmergency ? 'Switching to Emergency Mode' : 'Switching to Normal Mode'}
         </h3>
         <p className="text-gray-600 text-sm">
-          {isEmergency
-            ? 'Se încarcă pagina principală...'
-            : 'Se încarcă pagina de urgență...'
+          {!isEmergency
+            ? 'Loading emergency page...'
+            : 'Loading main page...'
           }
         </p>
       </div>
