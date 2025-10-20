@@ -81,7 +81,7 @@ export function EmergencyMode() {
               Completează formularul pentru o estimare rapidă și programare urgentă
             </p>
           </div>
-          <ContactForm />
+          <ContactForm hideTitle={true} />
         </div>
       </div>
 
