@@ -9,7 +9,7 @@ export function EmergencyMode() {
     <div className="min-h-screen">
       <Header />
       {/* Emergency Header */}
-      <div className="bg-red-600 text-white py-4 px-4">
+      <div className="bg-red-600 text-white py-8 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-2xl font-bold mb-2">🚨 URGENȚĂ PLUMBING</h1>
           <p className="text-lg">Intervenție rapidă - Disponibil 24/7</p>
