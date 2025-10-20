@@ -12,7 +12,6 @@ export function Hero() {
             <div className="text-center lg:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                 Instalator Autorizat Iași
-                <span className="hidden md:block text-blue-900">Urgențe Non-Stop</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl">
                 Intervenții rapide pentru instalații sanitare și termice în Iași.
@@ -25,7 +24,7 @@ export function Hero() {
                     src="/images/portfolio/PascalConfort .png"
                     alt="PascalConfort Logo - Instalator Autorizat Iași"
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     priority
                   />
                 </div>
@@ -65,7 +64,7 @@ export function Hero() {
                   src="/images/portfolio/PascalConfort .png"
                   alt="PascalConfort Logo - Instalator Autorizat Iași"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   priority
                 />
               </div>

@@ -10,7 +10,7 @@ export function About() {
             <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <Image
                 src="/images/portfolio/freepik__remove-text-add-him-overlay-crosing-a-bit-on-top-o__45494.png"
-                alt="Daniel Pascal - Professional plumber with 30+ years experience in plumbing and heating in Iași and UK"
+                alt="Daniel Pascal - Instalator profesionist cu peste 30 de ani de experiență în instalații sanitare și termice în Iași și UK"
                 fill
                 className="object-cover"
               />
@@ -24,13 +24,13 @@ export function About() {
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                With over 30 years of experience in plumbing and heating, Daniel Pascal has been providing professional services in Iași and beyond. He spent 14+ years at APAVITAL S.A. Iaşi, gaining extensive expertise in the field.
+                Cu peste 30 de ani de experiență în instalații sanitare și termice, Daniel Pascal oferă servicii profesionale în Iași și nu numai. A lucrat peste 14 ani la APAVITAL S.A. Iași, acumulând o expertiză vastă în domeniu.
               </p>
               <p>
-                Following that, he worked for 15 years in the UK, utilizing professional tools and equipment to serve a diverse clientele. Having served hundreds of clients, Daniel is committed to quality and customer satisfaction.
+                Ulterior, a lucrat 15 ani în Marea Britanie, utilizând unelte și echipamente profesionale pentru a servi o clientelă diversă. Având 1000+ de clienți mulțumiți, Daniel se angajează să ofere calitate și satisfacție clienților.
               </p>
               <p>
-                He offers rapid emergency response and provides quality guarantees on all services. Using only professional materials and equipment, Daniel ensures durable and reliable results for every project.
+                Oferă intervenții rapide în caz de urgență și garantează calitatea tuturor serviciilor. Utilizând doar materiale și echipamente profesionale, Daniel asigură rezultate durabile și fiabile pentru fiecare proiect.
               </p>
             </div>
 
@@ -40,7 +40,7 @@ export function About() {
                 <div className="text-sm text-gray-600">Ani Experiență</div>
               </div>
               <div className="text-center p-4 bg-orange-50 rounded-lg">
-                <div className="text-2xl font-bold text-orange-600">Hundreds</div>
+                <div className="text-2xl font-bold text-orange-600">1000+</div>
                 <div className="text-sm text-gray-600">Clienți Mulțumiți</div>
               </div>
             </div>

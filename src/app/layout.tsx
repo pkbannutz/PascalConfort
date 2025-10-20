@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "PascalConfort - Instalator Iași | Urgențe Non-Stop",
+  title: "PascalConfort - Instalator Iași",
   description: "Instalator sanitar și termic în Iași. Intervenții rapide pentru urgențe, reparații, montaj centrale. Seriozitate și Garanție. Sună Acum!",
   keywords: "instalator Iași, urgențe instalații Iași, instalații sanitare Iași, instalații termice Iași, montaj centrale Iași, reparații instalații Iași",
   authors: [{ name: "PascalConfort" }],

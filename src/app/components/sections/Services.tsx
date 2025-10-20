@@ -16,12 +16,6 @@ export function Services() {
       icon: '🔥'
     },
     {
-      id: '3',
-      title: 'Urgențe Non-Stop',
-      description: 'Intervenții de urgență 24/7 pentru avarii: țevi sparte, centrale defecte, inundații. Rezolvăm rapid orice problemă.',
-      icon: '🚨'
-    },
-    {
       id: '4',
       title: 'Desfundări Profesionale',
       description: 'Desfundare canalizări, sifoane, WC-uri cu echipamente speciale. Prevenție și întreținere pentru funcționarea optimă.',
