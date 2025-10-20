@@ -1,0 +1,241 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - heading "PascalConfort" [level=1] [ref=e7]
+        - navigation [ref=e8]:
+          - button "Servicii" [ref=e9]
+          - button "Despre" [ref=e10]
+          - button "Contact" [ref=e11]
+        - generic [ref=e12]:
+          - button "Activează mod urgență" [ref=e13]: Urgent
+          - link "WhatsApp" [ref=e14] [cursor=pointer]:
+            - /url: https://wa.me/40752399616
+          - link "Sună Acum" [ref=e15] [cursor=pointer]:
+            - /url: tel:+40752399616
+    - main [ref=e16]:
+      - generic [ref=e21]:
+        - heading "Instalator Autorizat Iași" [level=1] [ref=e22]
+        - paragraph [ref=e23]: Intervenții rapide pentru instalații sanitare și termice în Iași. Reparații, montaj centrale, desfundări. Seriozitate și garanție pe toate lucrările.
+        - generic [ref=e24]:
+          - img "PascalConfort Logo - Instalator Autorizat Iași" [ref=e26]
+          - generic [ref=e28]: 24/7 Disponibil
+        - generic [ref=e29]:
+          - link "Sună Acum - Urgențe" [ref=e30] [cursor=pointer]:
+            - /url: tel:+40752399616
+          - link "WhatsApp" [ref=e31] [cursor=pointer]:
+            - /url: https://wa.me/40752399616
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]: ⭐
+            - heading "Experiență 30+ Ani" [level=3] [ref=e38]
+            - paragraph [ref=e39]: Lucrări profesioniste în Iași și împrejurimi
+          - generic [ref=e40]:
+            - generic [ref=e41]: ⚡
+            - heading "Intervenții Rapide" [level=3] [ref=e42]
+            - paragraph [ref=e43]: Urgențe rezolvate în maxim 2 ore
+        - generic [ref=e44]:
+          - generic [ref=e45]: 🛡️
+          - heading "Garanție" [level=3] [ref=e46]
+          - paragraph [ref=e47]: Garanție pe toate lucrările efectuate
+      - generic [ref=e49]:
+        - generic [ref=e51]:
+          - heading "Servicii Instalații Oferite în Iași" [level=2] [ref=e52]
+          - paragraph [ref=e53]: Servicii complete de instalații sanitare și termice pentru locuințe și afaceri în Iași. Lucrări profesioniste cu garanție și prețuri competitive.
+        - generic [ref=e54]:
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e58]: 🔧
+              - heading "Instalații Sanitare Complete" [level=3] [ref=e59]
+            - paragraph [ref=e61]: Montaj și reparații instalații sanitare în apartamente, case și spații comerciale. Țevi, robinete, chiuvete, WC-uri.
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - generic [ref=e65]: 🔥
+              - heading "Instalații Termice" [level=3] [ref=e66]
+            - paragraph [ref=e68]: Montaj și service centrale termice, boilere, radiatoare. Întreținere și reparații pentru încălzire eficientă.
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - generic [ref=e72]: 🪠
+              - heading "Desfundări Profesionale" [level=3] [ref=e73]
+            - paragraph [ref=e75]: Desfundare canalizări, sifoane, WC-uri cu echipamente speciale. Prevenție și întreținere pentru funcționarea optimă.
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - generic [ref=e79]: 🏠
+              - heading "Montaj Centrale Termice" [level=3] [ref=e80]
+            - paragraph [ref=e82]: Instalare centrale noi, înlocuire centrale vechi, racordări la rețea. Lucrări conform normelor în vigoare.
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - generic [ref=e86]: ⚙️
+              - heading "Reparații și Întreținere" [level=3] [ref=e87]
+            - paragraph [ref=e89]: Service complet pentru toate tipurile de instalații. Diagnosticare, reparații, optimizare consum energetic.
+      - generic [ref=e92]:
+        - img "Daniel Pascal - Instalator profesionist cu peste 30 de ani de experiență în instalații sanitare și termice în Iași și UK" [ref=e95]
+        - generic [ref=e96]:
+          - heading "Despre – Daniel Pascal" [level=2] [ref=e97]
+          - generic [ref=e98]:
+            - paragraph [ref=e99]: Daniel are peste 30 de ani de experiență în instalații sanitare și termice, oferind servicii profesionale complete — de la montaj și reparații până la întreținere și modernizări.
+            - paragraph [ref=e100]: A acumulat mai bine de 14 ani de activitate la APAVITAL S.A. Iaşi, unde a lucrat cu sisteme complexe de alimentare cu apă, canalizare și epurare, gestionând echipamente și tehnologii de mari dimensiuni. De asemenea, a petrecut 15 ani în Marea Britanie, lucrând pentru clienți de top și folosind exclusiv scule și echipamente de nivel profesional.
+            - paragraph [ref=e101]: Pe parcursul carierei, Daniel a colaborat cu sute de clienți — de la apartamente moderne până la case tradiționale — prioritatea sa fiind calitatea lucrărilor, satisfacția deplină a fiecărui client și un ochi atent pentru estetică și simetrie.
+            - paragraph [ref=e102]: În situații de urgență, Daniel intervine rapid și oferă garanție pentru toate serviciile prestate. Utilizează doar materiale de înaltă calitate și echipamente profesionale pentru rezultate durabile și sigure.
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - generic [ref=e105]: 30+
+              - generic [ref=e106]: Ani Experiență
+            - generic [ref=e107]:
+              - generic [ref=e108]: 500+
+              - generic [ref=e109]: Clienți Mulțumiți
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - heading "Portofoliu Lucrări Instalații" [level=2] [ref=e113]
+          - paragraph [ref=e114]: Rezultate profesionale din lucrările efectuate în Iași. De la urgențe la proiecte complete, fiecare lucrare este executată cu atenție la detalii și respectarea normelor.
+        - generic [ref=e115]:
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - img "Centrală termică veche defectă în baie Iași" [ref=e120]
+              - img "Centrală termică nouă montată profesional în Iași" [ref=e122]
+            - heading "Înlocuire Centrală Termică" [level=3] [ref=e124]
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - img "Instalații sanitare deteriorate în bucătărie Iași" [ref=e129]
+              - img "Instalații sanitare complet renovate în Iași" [ref=e131]
+            - heading "Reparație Instalații Sanitare" [level=3] [ref=e133]
+        - generic [ref=e134]:
+          - paragraph [ref=e135]: Ai nevoie de lucrări similare? Contactează-mă pentru o ofertă personalizată.
+          - link "Cere Ofertă Gratuită" [ref=e136] [cursor=pointer]:
+            - /url: tel:+40752399616
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - heading "Întrebări Frecvente - Instalator Iași" [level=2] [ref=e140]
+          - paragraph [ref=e141]: Răspunsuri la cele mai comune întrebări despre serviciile de instalații în Iași
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - button "Cât costă o intervenție de urgență la instalații în Iași?" [ref=e144]:
+              - generic [ref=e145]:
+                - heading "Cât costă o intervenție de urgență la instalații în Iași?" [level=3] [ref=e146]
+                - img [ref=e147]
+            - generic [ref=e150]:
+              - paragraph [ref=e151]: "Costurile pentru intervenții de urgență variază în funcție de complexitatea problemei:"
+              - list [ref=e152]:
+                - listitem [ref=e153]: "Desfundare simplă: 150-300 lei"
+                - listitem [ref=e154]: "Reparație țeavă spartă: 200-500 lei"
+                - listitem [ref=e155]: "Înlocuire robinet: 100-250 lei"
+                - listitem [ref=e156]: "Probleme cu centrala termică: 300-800 lei"
+              - paragraph [ref=e157]: Ofer consultanță gratuită telefonică pentru evaluarea preliminară a costurilor.
+          - generic [ref=e158]:
+            - button "În cât timp puteți interveni pentru urgențe instalații Iași?" [ref=e159]:
+              - generic [ref=e160]:
+                - heading "În cât timp puteți interveni pentru urgențe instalații Iași?" [level=3] [ref=e161]
+                - img [ref=e162]
+            - paragraph [ref=e165]: Pentru urgențe, intervin în maximum 2 ore de la apel în zona Iași. În cazuri critice (inundații, lipsă căldură iarna), prioritatea este maximă. Pentru lucrări programate, stabilim împreună data cea mai convenabilă.
+          - generic [ref=e166]:
+            - button "Oferiți garanție pe lucrările de instalații sanitare?" [ref=e167]:
+              - generic [ref=e168]:
+                - heading "Oferiți garanție pe lucrările de instalații sanitare?" [level=3] [ref=e169]
+                - img [ref=e170]
+            - generic [ref=e173]:
+              - paragraph [ref=e174]: "Da, ofer garanție pe toate lucrările efectuate:"
+              - list [ref=e175]:
+                - listitem [ref=e176]: "Instalații sanitare: 2 ani garanție"
+                - listitem [ref=e177]: "Centrale termice: 3 ani garanție"
+                - listitem [ref=e178]: "Reparații: 1 an garanție"
+                - listitem [ref=e179]: "Desfundări: 6 luni garanție"
+          - generic [ref=e180]:
+            - button "Ce documente aveți pentru lucrări la centrale termice?" [ref=e181]:
+              - generic [ref=e182]:
+                - heading "Ce documente aveți pentru lucrări la centrale termice?" [level=3] [ref=e183]
+                - img [ref=e184]
+            - paragraph [ref=e187]: Efectuez montaj și service centrale termice cu materiale certificate și conform cu normativele în vigoare.
+          - generic [ref=e188]:
+            - button "Lucrați și în afara orașului Iași?" [ref=e189]:
+              - generic [ref=e190]:
+                - heading "Lucrați și în afara orașului Iași?" [level=3] [ref=e191]
+                - img [ref=e192]
+            - paragraph [ref=e195]: Da, intervin în toată zona metropolitană Iași și în localitățile din apropiere (Holboca, Tomești, Ciurea, etc.). Pentru distanțe mai mari, evaluăm fiecare caz în parte.
+          - generic [ref=e196]:
+            - button "Ce materiale folosiți pentru instalații?" [ref=e197]:
+              - generic [ref=e198]:
+                - heading "Ce materiale folosiți pentru instalații?" [level=3] [ref=e199]
+                - img [ref=e200]
+            - paragraph [ref=e203]: "Folosesc doar materiale de calitate superioară: țevi din cupru sau PPR, armături de la producători recunoscuți, centrale termice certificate. Prioritatea este durabilitatea și siguranța instalațiilor."
+      - generic [ref=e205]:
+        - generic [ref=e206]:
+          - heading "Contact / Cere Ofertă Instalator Iași" [level=2] [ref=e207]
+          - paragraph [ref=e208]: Completează formularul pentru o ofertă personalizată sau sună direct pentru urgențe
+        - generic [ref=e209]:
+          - generic [ref=e211]:
+            - generic [ref=e212]:
+              - generic [ref=e213]: Nume complet *
+              - textbox "Nume complet *" [ref=e214]:
+                - /placeholder: Numele dumneavoastră
+            - generic [ref=e215]:
+              - generic [ref=e216]: Număr telefon *
+              - textbox "Număr telefon *" [ref=e217]:
+                - /placeholder: +40 7XX XXX XXX
+            - generic [ref=e218]:
+              - generic [ref=e219]: Cartierul sau adresa aproximativă *
+              - textbox "Cartierul sau adresa aproximativă *" [ref=e220]:
+                - /placeholder: "Ex: Copou, Șoseaua Pavel Dimitrie Kiseleff 10"
+            - generic [ref=e221]:
+              - generic [ref=e222]: Mesaj / Descriere problemă *
+              - textbox "Mesaj / Descriere problemă *" [ref=e223]:
+                - /placeholder: Descrieți lucrarea sau problema...
+            - generic [ref=e224]:
+              - button "Trimite pe WhatsApp" [ref=e225]
+              - button "🚨 URGENT" [ref=e226]
+          - generic [ref=e227]:
+            - generic [ref=e228]:
+              - heading "Contact Direct" [level=3] [ref=e229]
+              - generic [ref=e230]:
+                - generic [ref=e231]:
+                  - img [ref=e233]
+                  - generic [ref=e235]:
+                    - paragraph [ref=e236]: Telefon
+                    - link "+40 752 399 616" [ref=e237] [cursor=pointer]:
+                      - /url: tel:+40752399616
+                - generic [ref=e238]:
+                  - img [ref=e240]
+                  - generic [ref=e242]:
+                    - paragraph [ref=e243]: WhatsApp
+                    - link "+40 752 399 616" [ref=e244] [cursor=pointer]:
+                      - /url: https://wa.me/40752399616
+            - generic [ref=e245]:
+              - heading "Urgențe 24/7" [level=4] [ref=e246]
+              - paragraph [ref=e247]: Pentru situații de urgență (țevi sparte, inundații, centrale defecte), sunați direct. Intervin rapid în toată zona Iași.
+    - contentinfo [ref=e248]:
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - generic [ref=e251]:
+            - heading "PascalConfort" [level=3] [ref=e252]
+            - paragraph [ref=e253]: Instalator sanitar și termic autorizat în Iași. Intervenții rapide pentru urgențe, reparații și montaj centrale.
+            - generic [ref=e254]:
+              - paragraph [ref=e255]: Garanție pe lucrări
+              - paragraph [ref=e256]: Intervenții non-stop
+          - generic [ref=e257]:
+            - heading "Contact" [level=3] [ref=e258]
+            - generic [ref=e259]:
+              - paragraph [ref=e260]:
+                - generic [ref=e261]: "Telefon:"
+                - link "+40 752 399 616" [ref=e262] [cursor=pointer]:
+                  - /url: tel:+40752399616
+              - paragraph [ref=e263]:
+                - generic [ref=e264]: "WhatsApp:"
+                - link "+40 752 399 616" [ref=e265] [cursor=pointer]:
+                  - /url: https://wa.me/40752399616
+              - paragraph [ref=e266]:
+                - generic [ref=e267]: "Email:"
+                - link "pascaldaniel1978@gmail.com" [ref=e268] [cursor=pointer]:
+                  - /url: mailto:pascaldaniel1978@gmail.com
+          - generic [ref=e269]:
+            - heading "Zona Servicii" [level=3] [ref=e270]
+            - generic [ref=e271]:
+              - paragraph [ref=e272]: Iași și împrejurimi
+              - paragraph [ref=e273]: Intervenții rapide în toată zona metropolitană Iași
+        - generic [ref=e274]:
+          - paragraph [ref=e275]: © 2025 PascalConfort. Toate drepturile rezervate.
+          - paragraph [ref=e276]: Servicii profesionale de instalații sanitare și termice în Iași
+  - alert [ref=e277]
+```

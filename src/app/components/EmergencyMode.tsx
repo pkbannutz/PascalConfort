@@ -5,6 +5,7 @@ import { ContactForm } from './sections/ContactForm';
 import { Button } from './ui/Button';
 
 export function EmergencyMode() {
+  const urgentQuickMessage = `*PascalConfort - Cerere Ofertă Instalator Iași* 🚨 *URGENT!*\n\n*Mesaj:* *\n\n*Adresa:* \n\n*Nume:* \n*Telefon:* \n\n🚨 CERERE URGENTĂ - INTERVENȚIE RAPIDĂ NECESARĂ!`;
   return (
     <div className="min-h-screen">
       <Header />
@@ -34,7 +35,7 @@ export function EmergencyMode() {
               </Button>
               <Button
                 variant="secondary"
-                href="https://wa.me/40752399616"
+                href={`https://wa.me/40752399616?text=${encodeURIComponent(urgentQuickMessage)}`}
                 className="bg-green-600 text-white border border-green-600 hover:bg-green-700"
               >
                 💬 WhatsApp
@@ -81,7 +82,7 @@ export function EmergencyMode() {
               Completează formularul pentru o estimare rapidă și programare urgentă
             </p>
           </div>
-          <ContactForm hideTitle={true} hideWhatsAppButton={true} />
+          <ContactForm hideTitle={true} />
         </div>
       </div>
 

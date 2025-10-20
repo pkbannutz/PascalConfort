@@ -3,6 +3,7 @@ import { Button } from '@/app/components/ui/Button';
 import { ScrollReveal } from '@/app/components/ui/ScrollReveal';
 
 export function Hero() {
+  const normalWhatsappMessage = `*PascalConfort - Cerere Ofertă Instalator Iași*\n\n*Mesaj:* *\n\n*Adresa:* \n\n*Nume:* \n*Telefon:* `;
   return (
     <section className="pt-16 bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -47,7 +48,7 @@ export function Hero() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  href="https://wa.me/40752399616"
+                  href={`https://wa.me/40752399616?text=${encodeURIComponent(normalWhatsappMessage)}`}
                   className="text-lg px-8 py-4"
                 >
                   WhatsApp

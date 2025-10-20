@@ -27,7 +27,7 @@ export function Footer() {
               </p>
               <p>
                 <span className="block font-medium">WhatsApp:</span>
-                <a href="https://wa.me/40752399616" className="hover:text-orange-400 transition-colors">
+                <a href={`https://wa.me/40752399616?text=${encodeURIComponent('*PascalConfort - Cerere Ofertă Instalator Iași*\n\n*Mesaj:* *\n\n*Adresa:* \n\n*Nume:* \n*Telefon:* ')}`} className="hover:text-orange-400 transition-colors">
                   +40 752 399 616
                 </a>
               </p>

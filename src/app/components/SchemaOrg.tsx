@@ -12,15 +12,15 @@ const jsonLd: WithContext<Plumber> = {
   "description": "Instalator sanitar și termic în Iași. Intervenții rapide pentru urgențe, reparații, montaj centrale. Seriozitate și Garanție.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Strada Exemplu Nr. 10",
+    "streetAddress": "Strada Ion Creangă 15",
     "addressLocality": "Iași",
-    "postalCode": "700000",
+    "postalCode": "700123",
     "addressCountry": "RO"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 47.1585,
-    "longitude": 27.6014
+    "latitude": 47.1621,
+    "longitude": 27.5885
   },
   "openingHoursSpecification": [
     {

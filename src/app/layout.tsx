@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { SchemaOrg } from "./components/SchemaOrg";
+import { EmergencyProvider } from "./components/EmergencyProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -44,7 +45,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} antialiased font-sans`}
       >
-        {children}
+        <EmergencyProvider>
+          {children}
+        </EmergencyProvider>
       </body>
     </html>
   );

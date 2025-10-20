@@ -7,7 +7,7 @@
 
 .theme-emergency {
   --color-primary: #ffffff;
-  --color-accent: #ffffff;
+  --color-accent: #dc2626;
 }
 
 @theme inline {

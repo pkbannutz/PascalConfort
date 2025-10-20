@@ -5,6 +5,7 @@ import { useEmergencyStore } from '@/app/hooks/useEmergencyStore';
 import { Button } from '@/app/components/ui/Button';
 
 export function Header() {
+  const normalWhatsappMessage = `*PascalConfort - Cerere Ofertă Instalator Iași*\n\n*Mesaj:* *\n\n*Adresa:* \n\n*Nume:* \n*Telefon:* `;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isEmergency, toggleEmergency } = useEmergencyStore();
 
@@ -66,7 +67,7 @@ export function Header() {
             <Button
               variant="secondary"
               size="sm"
-              href="https://wa.me/40752399616"
+              href={`https://wa.me/40752399616?text=${encodeURIComponent(normalWhatsappMessage)}`}
               className="hidden sm:inline-flex"
             >
               WhatsApp
@@ -125,7 +126,7 @@ export function Header() {
                 <Button
                   variant="secondary"
                   size="sm"
-                  href="https://wa.me/40752399616"
+                  href={`https://wa.me/40752399616?text=${encodeURIComponent(normalWhatsappMessage)}`}
                   className="w-full mb-2"
                 >
                   WhatsApp

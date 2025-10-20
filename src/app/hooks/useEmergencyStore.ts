@@ -10,13 +10,5 @@ interface EmergencyState {
 export const useEmergencyStore = create<EmergencyState>((set) => ({
   isEmergency: false,
   toggleEmergency: () =>
-    set((state) => {
-      const newEmergency = !state.isEmergency;
-      if (newEmergency) {
-        document.body.classList.add('theme-emergency');
-      } else {
-        document.body.classList.remove('theme-emergency');
-      }
-      return { isEmergency: newEmergency };
-    }),
+    set((state) => ({ isEmergency: !state.isEmergency })),
 }));

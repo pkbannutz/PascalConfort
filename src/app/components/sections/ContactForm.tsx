@@ -4,10 +4,12 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/app/components/ui/Button';
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Numele trebuie să aibă cel puțin 2 caractere'),
-  phone: z.string().min(10, 'Numărul de telefon trebuie să aibă cel puțin 10 cifre'),
+  phone: z.string().regex(/^(\+40 \d{2} \d{3} \d{4}|07\d{2} \d{3} \d{3})$/, 'Format invalid. Folosiți +40 XX XXX XXXX sau 07XX XXX XXX'),
   address: z.string().min(5, 'Adresa trebuie să aibă cel puțin 5 caractere'),
   message: z.string().min(10, 'Mesajul trebuie să aibă cel puțin 10 caractere'),
 });
@@ -16,10 +18,12 @@ type ContactFormInputs = z.infer<typeof contactSchema>;
 
 interface ContactFormProps {
   hideTitle?: boolean;
-  hideWhatsAppButton?: boolean;
 }
 
-export function ContactForm({ hideTitle = false, hideWhatsAppButton = false }: ContactFormProps) {
+export function ContactForm({ hideTitle = false }: ContactFormProps) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const {
     register,
     handleSubmit,
@@ -29,11 +33,32 @@ export function ContactForm({ hideTitle = false, hideWhatsAppButton = false }: C
     resolver: zodResolver(contactSchema),
   });
 
-  const handleNormalSubmit = (data: ContactFormInputs) => {
-    const whatsappMessage = `*PascalConfort - Cerere Ofertă Instalator Iași*\n\n*Mesaj:* *${data.message}*\n\n*Adresa:* ${data.address}\n\n*Nume:* ${data.name}\n*Telefon:* ${data.phone}`;
-    const whatsappUrl = `https://wa.me/40752399616?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(whatsappUrl, '_blank');
-    reset();
+  const handleNormalSubmit = async (data: ContactFormInputs) => {
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      await emailjs.send(
+        'service_123456789', // Replace with actual service ID
+        'template_123456789', // Replace with actual template ID
+        {
+          from_name: data.name,
+          from_phone: data.phone,
+          from_address: data.address,
+          message: data.message,
+          to_email: 'pascaldaniel1978@gmail.com',
+        },
+        'public_key_123456789' // Replace with actual public key
+      );
+
+      setSubmitStatus('success');
+      reset();
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleUrgentSubmit = (data: ContactFormInputs) => {
@@ -127,6 +152,17 @@ export function ContactForm({ hideTitle = false, hideWhatsAppButton = false }: C
 
               <div className="flex flex-col gap-4">
                 <Button
+                  type="submit"
+                  variant="primary"
+                  size="lg"
+                  className="w-full"
+                  disabled={isSubmitting}
+                  onClick={handleSubmit(handleNormalSubmit)}
+                >
+                  {isSubmitting ? 'Se trimite...' : 'Trimite Cerere Ofertă'}
+                </Button>
+
+                <Button
                   type="button"
                   variant="secondary"
                   size="lg"
@@ -136,6 +172,22 @@ export function ContactForm({ hideTitle = false, hideWhatsAppButton = false }: C
                   🚨 URGENT
                 </Button>
               </div>
+
+              {submitStatus === 'success' && (
+                <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-md">
+                  <p className="text-green-800 text-sm">
+                    ✅ Mesajul a fost trimis cu succes! Vă vom contacta în curând.
+                  </p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-md">
+                  <p className="text-red-800 text-sm">
+                    ❌ Eroare la trimiterea mesajului. Vă rugăm să încercați din nou sau să ne contactați direct.
+                  </p>
+                </div>
+              )}
             </form>
           </div>
 
