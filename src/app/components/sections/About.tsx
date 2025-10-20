@@ -20,17 +20,20 @@ export function About() {
           {/* Content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Despre Mine - Daniel Pascal
+              Despre Mine – Daniel Pascal
             </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Cu peste 30 de ani de experiență în instalații sanitare și termice, Daniel Pascal oferă servicii profesionale în Iași și nu numai. A lucrat peste 14 ani la APAVITAL S.A. Iași, acumulând o expertiză vastă în domeniu.
+                Daniel are peste 30 de ani de experiență în instalații sanitare și termice, oferind servicii profesionale complete — de la montaj și reparații până la întreținere și modernizări.
               </p>
               <p>
-                Ulterior, a lucrat 15 ani în Marea Britanie, utilizând unelte și echipamente profesionale pentru a servi o clientelă diversă. Având 1000+ de clienți mulțumiți, Daniel se angajează să ofere calitate și satisfacție clienților.
+                A acumulat mai bine de 14 ani de activitate la APAVITAL S.A. Iaşi, unde a lucrat cu sisteme complexe de alimentare cu apă, canalizare și epurare, gestionând echipamente și tehnologii de mari dimensiuni. De asemenea, a petrecut 15 ani în Marea Britanie, lucrând pentru clienți de top și folosind exclusiv scule și echipamente de nivel profesional.
               </p>
               <p>
-                Oferă intervenții rapide în caz de urgență și garantează calitatea tuturor serviciilor. Utilizând doar materiale și echipamente profesionale, Daniel asigură rezultate durabile și fiabile pentru fiecare proiect.
+                Pe parcursul carierei, Daniel a colaborat cu sute de clienți — de la apartamente moderne până la case tradiționale — prioritatea sa fiind calitatea lucrărilor, satisfacția deplină a fiecărui client și un ochi atent pentru estetică și simetrie.
+              </p>
+              <p>
+                În situații de urgență, Daniel intervine rapid și oferă garanție pentru toate serviciile prestate. Utilizează doar materiale de înaltă calitate și echipamente profesionale pentru rezultate durabile și sigure.
               </p>
             </div>
 
