@@ -6,6 +6,7 @@ import { z } from 'zod';
 import { Button } from '@/app/components/ui/Button';
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
+import { CONTACT_INFO, WHATSAPP_MESSAGES } from '@/app/lib/constants';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Numele trebuie să aibă cel puțin 2 caractere'),
@@ -19,6 +20,18 @@ type ContactFormInputs = z.infer<typeof contactSchema>;
 interface ContactFormProps {
   hideTitle?: boolean;
 }
+
+const FormInput = ({ label, error, children }: { label: string; error?: { message?: string }; children: React.ReactNode }) => (
+  <div>
+    <label className="block text-sm font-medium text-gray-700 mb-2">
+      {label}
+    </label>
+    {children}
+    {error?.message && (
+      <p className="mt-1 text-sm text-red-600">{error.message}</p>
+    )}
+  </div>
+);
 
 export function ContactForm({ hideTitle = false }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -46,7 +59,7 @@ export function ContactForm({ hideTitle = false }: ContactFormProps) {
           from_phone: data.phone,
           from_address: data.address,
           message: data.message,
-          to_email: 'pascaldaniel1978@gmail.com',
+          to_email: CONTACT_INFO.email,
         },
         'public_key_123456789' // Replace with actual public key
       );
@@ -63,7 +76,7 @@ export function ContactForm({ hideTitle = false }: ContactFormProps) {
 
   const handleUrgentSubmit = (data: ContactFormInputs) => {
     const whatsappMessage = `*PascalConfort - Cerere Ofertă Instalator Iași* 🚨 *URGENT!*\n\n*Mesaj:* *${data.message}*\n\n*Adresa:* ${data.address}\n\n*Nume:* ${data.name}\n*Telefon:* ${data.phone}\n\n🚨 CERERE URGENTĂ - INTERVENȚIE RAPIDĂ NECESARĂ!`;
-    const whatsappUrl = `https://wa.me/40752399616?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     reset();
   };
@@ -86,10 +99,7 @@ export function ContactForm({ hideTitle = false }: ContactFormProps) {
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-md p-8">
             <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Nume complet *
-                </label>
+              <FormInput label="Nume complet *" error={errors.name}>
                 <input
                   {...register('name')}
                   type="text"
@@ -97,15 +107,9 @@ export function ContactForm({ hideTitle = false }: ContactFormProps) {
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
                   placeholder="Numele dumneavoastră"
                 />
-                {errors.name && (
-                  <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
-                )}
-              </div>
+              </FormInput>
 
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                  Număr telefon *
-                </label>
+              <FormInput label="Număr telefon *" error={errors.phone}>
                 <input
                   {...register('phone')}
                   type="tel"
@@ -113,15 +117,9 @@ export function ContactForm({ hideTitle = false }: ContactFormProps) {
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
                   placeholder="+40 7XX XXX XXX"
                 />
-                {errors.phone && (
-                  <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
-                )}
-              </div>
+              </FormInput>
 
-              <div>
-                <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-2">
-                  Cartierul sau adresa aproximativă *
-                </label>
+              <FormInput label="Cartierul sau adresa aproximativă *" error={errors.address}>
                 <input
                   {...register('address')}
                   type="text"
@@ -129,15 +127,9 @@ export function ContactForm({ hideTitle = false }: ContactFormProps) {
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
                   placeholder="Ex: Copou, Șoseaua Pavel Dimitrie Kiseleff 10"
                 />
-                {errors.address && (
-                  <p className="mt-1 text-sm text-red-600">{errors.address.message}</p>
-                )}
-              </div>
+              </FormInput>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Mesaj / Descriere problemă *
-                </label>
+              <FormInput label="Mesaj / Descriere problemă *" error={errors.message}>
                 <textarea
                   {...register('message')}
                   id="message"
@@ -145,10 +137,7 @@ export function ContactForm({ hideTitle = false }: ContactFormProps) {
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
                   placeholder="Descrieți lucrarea sau problema..."
                 />
-                {errors.message && (
-                  <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
-                )}
-              </div>
+              </FormInput>
 
               <div className="flex flex-col gap-4">
                 <Button
@@ -206,8 +195,8 @@ export function ContactForm({ hideTitle = false }: ContactFormProps) {
                   </div>
                   <div className="ml-3">
                     <p className="text-gray-900 font-medium">Telefon</p>
-                    <a href="tel:+40752399616" className="text-blue-600 hover:text-blue-800">
-                      +40 752 399 616
+                    <a href={`tel:${CONTACT_INFO.phone}`} className="text-blue-600 hover:text-blue-800">
+                      {CONTACT_INFO.phone}
                     </a>
                   </div>
                 </div>
@@ -220,8 +209,8 @@ export function ContactForm({ hideTitle = false }: ContactFormProps) {
                   </div>
                   <div className="ml-3">
                     <p className="text-gray-900 font-medium">WhatsApp</p>
-                    <a href="https://wa.me/40752399616" className="text-green-600 hover:text-green-800">
-                      +40 752 399 616
+                    <a href={CONTACT_INFO.whatsappUrl} className="text-green-600 hover:text-green-800">
+                      {CONTACT_INFO.phone}
                     </a>
                   </div>
                 </div>

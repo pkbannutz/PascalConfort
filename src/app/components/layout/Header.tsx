@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import { useEmergencyStore } from '@/app/hooks/useEmergencyStore';
 import { Button } from '@/app/components/ui/Button';
+import { CONTACT_INFO, WHATSAPP_MESSAGES, COMPANY_INFO } from '@/app/lib/constants';
 
 export function Header() {
-  const normalWhatsappMessage = `*PascalConfort - Cerere Ofertă Instalator Iași*\n\n*Mesaj:* *\n\n*Adresa:* \n\n*Nume:* \n*Telefon:* `;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isEmergency, toggleEmergency } = useEmergencyStore();
 
@@ -23,7 +23,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-blue-900">PascalConfort</h1>
+            <h1 className="text-xl font-bold text-blue-900">{COMPANY_INFO.name}</h1>
           </div>
 
           {/* Desktop Navigation */}
@@ -67,7 +67,7 @@ export function Header() {
             <Button
               variant="secondary"
               size="sm"
-              href={`https://wa.me/40752399616?text=${encodeURIComponent(normalWhatsappMessage)}`}
+              href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(isEmergency ? WHATSAPP_MESSAGES.urgent : WHATSAPP_MESSAGES.normal)}`}
               className="hidden sm:inline-flex"
             >
               WhatsApp
@@ -77,7 +77,7 @@ export function Header() {
             <Button
               variant="primary"
               size="sm"
-              href="tel:+40752399616"
+              href={`tel:${CONTACT_INFO.phone}`}
             >
               Sună Acum
             </Button>
@@ -104,29 +104,24 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-gray-200 bg-white">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <button
-                onClick={() => scrollToSection('servicii')}
-                className="block w-full text-left px-2 py-1 text-sm text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium"
-              >
-                Servicii
-              </button>
-              <button
-                onClick={() => scrollToSection('despre')}
-                className="block w-full text-left px-2 py-1 text-sm text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium"
-              >
-                Despre
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-2 py-1 text-sm text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium"
-              >
-                Contact
-              </button>
+              {[
+                { label: 'Servicii', section: 'servicii' },
+                { label: 'Despre', section: 'despre' },
+                { label: 'Contact', section: 'contact' }
+              ].map(({ label, section }) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className="block w-full text-left px-2 py-1 text-sm text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-medium"
+                >
+                  {label}
+                </button>
+              ))}
               <div className="px-2 py-1">
                 <Button
                   variant="secondary"
                   size="sm"
-                  href={`https://wa.me/40752399616?text=${encodeURIComponent(normalWhatsappMessage)}`}
+                  href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(isEmergency ? WHATSAPP_MESSAGES.urgent : WHATSAPP_MESSAGES.normal)}`}
                   className="w-full mb-2"
                 >
                   WhatsApp

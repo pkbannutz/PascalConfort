@@ -1,3 +1,5 @@
+import { CONTACT_INFO, WHATSAPP_MESSAGES, COMPANY_INFO } from '@/app/lib/constants';
+
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
@@ -5,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">PascalConfort</h3>
+            <h3 className="text-lg font-semibold mb-4">{COMPANY_INFO.name}</h3>
             <p className="text-gray-300 mb-4">
               Instalator sanitar și termic autorizat în Iași. Intervenții rapide pentru urgențe, reparații și montaj centrale.
             </p>
@@ -21,20 +23,20 @@ export function Footer() {
             <div className="space-y-2 text-gray-300">
               <p>
                 <span className="block font-medium">Telefon:</span>
-                <a href="tel:+40752399616" className="hover:text-orange-400 transition-colors">
-                  +40 752 399 616
+                <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-orange-400 transition-colors">
+                  {CONTACT_INFO.phone}
                 </a>
               </p>
               <p>
                 <span className="block font-medium">WhatsApp:</span>
-                <a href={`https://wa.me/40752399616?text=${encodeURIComponent('*PascalConfort - Cerere Ofertă Instalator Iași*\n\n*Mesaj:* *\n\n*Adresa:* \n\n*Nume:* \n*Telefon:* ')}`} className="hover:text-orange-400 transition-colors">
-                  +40 752 399 616
+                <a href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(WHATSAPP_MESSAGES.normal)}`} className="hover:text-orange-400 transition-colors">
+                  {CONTACT_INFO.phone}
                 </a>
               </p>
               <p>
                 <span className="block font-medium">Email:</span>
-                <a href="mailto:pascaldaniel1978@gmail.com" className="hover:text-orange-400 transition-colors">
-                  pascaldaniel1978@gmail.com
+                <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-orange-400 transition-colors">
+                  {CONTACT_INFO.email}
                 </a>
               </p>
             </div>

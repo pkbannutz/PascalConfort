@@ -3,12 +3,13 @@
 import { Header } from './layout/Header';
 import { ContactForm } from './sections/ContactForm';
 import { Button } from './ui/Button';
+import { CONTACT_INFO, WHATSAPP_MESSAGES, COMPANY_INFO } from '@/app/lib/constants';
 
 export function EmergencyMode() {
-  const urgentQuickMessage = `*PascalConfort - Cerere Ofertă Instalator Iași* 🚨 *URGENT!*\n\n*Mesaj:* *\n\n*Adresa:* \n\n*Nume:* \n*Telefon:* \n\n🚨 CERERE URGENTĂ - INTERVENȚIE RAPIDĂ NECESARĂ!`;
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Header />
+      {/* Footer removed in emergency mode */}
       {/* Emergency Header */}
       <div className="bg-red-600 text-white py-8 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -28,14 +29,14 @@ export function EmergencyMode() {
             <div className="flex gap-3">
               <Button
                 variant="primary"
-                href="tel:+40752399616"
+                href={`tel:${CONTACT_INFO.phone}`}
                 className="bg-red-600 hover:bg-red-700"
               >
                 📞 Sună Acum
               </Button>
               <Button
                 variant="secondary"
-                href={`https://wa.me/40752399616?text=${encodeURIComponent(urgentQuickMessage)}`}
+                href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent(WHATSAPP_MESSAGES.urgent)}`}
                 className="bg-green-600 text-white border border-green-600 hover:bg-green-700"
               >
                 💬 WhatsApp
@@ -93,12 +94,12 @@ export function EmergencyMode() {
             <div>
               <h3 className="font-semibold text-gray-800 mb-2">Contact Direct</h3>
               <p className="text-gray-600">Telefon</p>
-              <p className="font-semibold text-red-600">+40 752 399 616</p>
+              <p className="font-semibold text-red-600">{CONTACT_INFO.phone}</p>
             </div>
             <div>
               <h3 className="font-semibold text-gray-800 mb-2">WhatsApp</h3>
               <p className="text-gray-600">Mesaj rapid</p>
-              <p className="font-semibold text-red-600">+40 752 399 616</p>
+              <p className="font-semibold text-red-600">{CONTACT_INFO.phone}</p>
             </div>
             <div>
               <h3 className="font-semibold text-gray-800 mb-2">Urgențe 24/7</h3>
